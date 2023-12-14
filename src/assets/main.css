@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-button {
+  @apply bg-primary text-white px-4 p-2 rounded-md hover:bg-primary-600;
+}
+
+.secondry-button {
+  @apply bg-secondry text-white px-5 p-2 rounded-md;
+}
+
+.secondry2-button {
+  @apply bg-neutral-600 text-white px-5 p-2 rounded-md;
+}
+
+.input {
+  @apply bg-primary p-4 rounded-lg shadow-md;
+}
+
+.my-input-label {
+  @apply block text-gray-700 font-semibold mb-2;
+}
+
+.input-field {
+  @apply  px-3 py-2 border w-full rounded-md focus:outline-none focus:shadow-lg focus:border-primary;
+  /* Additional styles for the input field */
+}
+
+.menu-item{
+  @apply lg:w-[12.5%] text-center py-3 relative
+}
+.sub-menu{
+  @apply bg-primary  text-black absolute z-30 top-12 left-0 w-[150%] hidden transition-all duration-500 delay-75
+}
+.sub-menu li{
+  @apply px-3 py-3 text-white hover:bg-secondry-600 text-start
+}
+
+.menu-item:hover .sub-menu{
+  @apply block transition-all duration-500
+}
+.menu-item:hover i{
+  @apply -rotate-90
+}
+.title1{
+  @apply text-4xl font-bold text-primary
+}
+.active{
+  @apply bg-secondry
+}

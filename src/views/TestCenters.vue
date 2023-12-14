@@ -1,0 +1,83 @@
+<template>
+    <div class="container mx-auto sm:px-2 px-5">
+        <h1 class="title1 text-center my-5">Authorized Test Centers</h1>
+        <p class="text-xl">The American University of Science & Technology (AUST) has approved many partners to become accredited training and examination centers.</p>
+        <p class="text-xl my-5">This is the list of accredited training and examination centers :</p>
+        <div class="w-full overflow-x-scroll">
+            <table class="w-full overflow-x-scroll">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="rounded-tl-md">REGION</th>
+                        <th>COUNTRY</th>
+                        <th>STATE / GOVERNMENT</th>
+                        <th>NAME</th>
+                        <th class="w-[14.2%]">LOGO</th>
+                        <th>CONTACT INFORMATION</th>
+                        <th class="rounded-tr-md">AUTHORIZATION</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>Europe</td>
+                        <td>United Kingdom</td>
+                        <td></td>
+                        <td>European College for Science & Arts</td>
+                        <td><img src="../assets/ECSA-logos-png.jpg" alt="ECSA Logo"></td>
+                        <td>
+                            <span>Address: 35 Factory Street, Loughborough, Leicestershire, England, United Kingdom.</span>
+                            <span>Website: www.EuropeanCollege-edu.uk</span>
+                            <span>Email: info@EuropeanCollege-edu.uk</span>
+                        </td>
+                        <td>Agent & Partner</td>
+                    </tr>
+                    <tr>
+                        <td>Middle East & Africa</td>
+                        <td>Egypt</td>
+                        <td></td>
+                        <td>Canadian Institute For Training & Development</td>
+                        <td><img src="../assets/citd-logo-png.jpg" alt="ECSA Logo"></td>
+                        <td>
+                            <span>Address: 35 Elobour Buildings,Salah Salem St,Cairo,Egypt</span>
+                            <span>Website: www. citdtraining.com</span>
+                            <span>Email: contactus@ citdtraining.com</span>
+                        </td>
+                        <td>Agent & Partner</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Egypt</td>
+                        <td></td>
+                        <td>Diplomatic Training Center</td>
+                        <td><img src="../assets/Diplomatic.jpg" alt="ECSA Logo"></td>
+                        <td>
+                            <span>Address: 51 Mohi El Din Abu El Ezz Street - Dokki -Giza,-Egypt</span>
+                            <span>Website: www.diplomaticeg.com</span>
+                            <span>Email: diplomatictraining.eg@gmail.com</span>
+                        </td>
+                        <td>Partner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name:'TestCenters',
+    }
+</script>
+
+<style scoped>
+table{
+    text-wrap: wrap;
+}
+table,
+tr,
+td,th{
+    @apply p-2
+}
+tbody tr:nth-of-type(even){
+    @apply bg-gray-200
+}
+</style>
