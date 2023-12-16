@@ -28,20 +28,22 @@
 }
 
 .menu-item{
-  @apply lg:w-[12.5%] text-center py-3 relative
+  @apply lg:w-[12.5%] text-center py-3 relative hover:cursor-pointer
 }
 .sub-menu{
   @apply bg-primary  text-black absolute z-30 top-12 left-0 w-[150%] hidden transition-all duration-500 delay-75
 }
 .sub-menu li{
-  @apply px-3 py-3 text-white hover:bg-secondry-600 text-start
+  @apply px-3 py-3 text-white hover:bg-secondry-600 text-start hover:cursor-pointer
+}
+@media (min-width: 767.999999999999999px){
+  .menu-item:hover i{
+    @apply -rotate-90
+  } 
 }
 
 .menu-item:hover .sub-menu{
   @apply block transition-all duration-500
-}
-.menu-item:hover i{
-  @apply -rotate-90
 }
 .title1{
   @apply lg:text-4xl font-bold text-primary md:text-3xl text-xl
