@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto sm:px-2 px-5">
         <h1 class="title1 text-center my-5">Graduated Studies</h1>
         <div class="my-10">
             <div class="border-2 border-b-0 flex justify-between items-center py-3 px-5 accordion" @click="showNextRow" id="1">

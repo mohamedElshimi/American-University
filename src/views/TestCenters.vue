@@ -1,10 +1,10 @@
 <template>
     <div class="container mx-auto sm:px-2 px-5">
         <h1 class="title1 text-center my-5">Authorized Test Centers</h1>
-        <p class="text-xl">The American University of Science & Technology (AUST) has approved many partners to become accredited training and examination centers.</p>
-        <p class="text-xl my-5">This is the list of accredited training and examination centers :</p>
+        <p class="xl:text-xl lg:text-lg md:text-base text-sm">The American University of Science & Technology (AUST) has approved many partners to become accredited training and examination centers.</p>
+        <p class="xl:text-xl lg:text-lg md:text-base text-sm my-5">This is the list of accredited training and examination centers :</p>
         <div class="w-full overflow-x-scroll">
-            <table class="w-full overflow-x-scroll">
+            <table class="w-full overflow-x-scroll md:text-base text-sm">
                 <thead class="bg-primary text-white">
                     <tr>
                         <th class="rounded-tl-md">REGION</th>

@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <h1 class="uppercase text-3xl font-bold text-primary text-center my-5">about University</h1>
-    <section class="container mx-auto">
+    <h1 class="uppercase title1 text-center my-5">about University</h1>
+    <section class="container mx-auto sm:px-2 px-5">
       <section>
         <img src="../assets/banner-1917x742.jpg" class="w-full mb-5" alt="">
         <div class="ps-6">
-          <ul class="list-disc">
+          <ul class="list-disc md:text-base text-sm">
             <li class="mb-3">The American University of Science& Technology (AUST) was founded in order to fulfill the need for non-traditional higher education in the world.</li>
             <li class="mb-3">AUST is keen on taking responsibility for the community by creating and providing opportunities for individual development for those who want to pursue careers in all fields.</li>
             <li class="mb-3">We proudly transfer knowledge and critical thinking skills through our dynamic programs the non-traditional way of life.</li>
@@ -20,9 +20,9 @@
         </div>
       </section>
       <section class="mt-5">
-        <h2 class="text-4xl font-bold text-primary">Professional studies Programs and Faculties:</h2>
-        <h3 class="text-base font-bold mt-3">American University of Science & Technology (AUST) presents more than 70 specialties in 16 different fields.<br>Here all the scientific degrees that we offer:</h3>
-        <table class="border-2 w-full text-center mt-3 mb-5">
+        <h2 class="title1">Professional studies Programs and Faculties:</h2>
+        <h3 class="md:text-base text-sm font-bold mt-3">American University of Science & Technology (AUST) presents more than 70 specialties in 16 different fields.<br>Here all the scientific degrees that we offer:</h3>
+        <table class="border-2 w-full md:text-base text-sm text-center mt-3 mb-5">
           <thead class="border-2">
             <th class="border-2 py-2 w-1/2">Degree</th>
             <th class="border-2 py-2 w-1/2">Faculty</th>
@@ -61,8 +61,8 @@
         </table>
       </section>
       <section>
-        <h2 class="text-3xl font-bold text-primary">Programs</h2>
-        <h3 class="text-base font-bold my-3">American University of Science & Technology (AUST) presents more than 70 specialties in 16 different fields &these are the most common programs:</h3>
+        <h2 class="title1">Programs</h2>
+        <h3 class="md:text-base text-sm font-bold my-3">American University of Science & Technology (AUST) presents more than 70 specialties in 16 different fields &these are the most common programs:</h3>
         <div>
           <ul class="text-sm">
             <li class="mb-1">• Business Administration</li>
@@ -103,7 +103,7 @@
         </div>
       </section>
       <section class="my-5">
-        <h2 class="text-3xl font-bold text-primary my-5">Authentication:</h2>
+        <h2 class="title1 my-5">Authentication:</h2>
         <ul class="text-sm">
           <li class="mb-1">• Notary</li>
           <li class="mb-1">• Governor of the state</li>

@@ -1,7 +1,7 @@
 <template>
     <div class="bg-primary flex py-3">
-        <div class="container mx-auto flex flex-wrap items-center justify-between">
-            <div class="flex items-center">
+        <div class="container mx-auto flex flex-wrap items-center md:justify-between justify-center sm:px-2 px-5">
+            <div class="flex items-center sm:mb-0 mb-5">
                 <i class="fa-solid fa-envelope text-secondry text-lg"></i>
                 <p class="ms-2 text-white text-[17px]">info@aust-edu.us</p>
             </div>
@@ -10,7 +10,7 @@
                     <p>Quick Links</p>
                     <i class="fa-solid fa-chevron-down ms-2 transition-all duration-500" :class="iconRotate"></i>
                 </button>
-                <ul class="border absolute z-20 text-black bg-white p-0 mt-11" v-if="quickLinks">
+                <ul class="border absolute z-[10000000] text-black bg-white p-0 mt-11" v-if="quickLinks">
                     <router-link to="/GraduatedStudies" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/GraduatedStudies') }"><li>Graduated Studies</li></router-link><hr>
                     <router-link to="/UndergraduateStudies" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/UndergraduateStudies') }"><li>Undergraduate Studies</li></router-link><hr>
                     <router-link to="/AgentsNpartners" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/AgentsNpartners') }"><li>Agents & Partners</li></router-link><hr>
@@ -21,17 +21,18 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto flex items-center justify-between py-2">
+    <div class="container mx-auto py-3 flex items-center justify-between sm:px-2 px-5">
         <div class="w-1/3">
             <img src="../assets/final-logo-1024x325.jpg" alt="American University" />
         </div>
-        <div class="flex w-1/2 justify-end">
+        <div class="flex md:w-1/2 w-2/3 justify-end">
             <div><input type="text" class="input-field w-full" placeholder="Enter a Registration-ID"></div>
             <button class="secondry-button ms-2">Verify</button>
         </div>
     </div>
-    <nav class="bg-white relative border-gray-200 dark:text-white dark:bg-primary dark:border-gray-700">
-        <button class="resposive-icon mx-auto hidden text-2xl" @click="toggleMenuBar"><i class="fa-solid fa-bars text-white"></i></button>
+    <nav class="bg-white relative border-gray-200 md:py-0 py-2 dark:text-white dark:bg-primary dark:border-gray-700">
+        <button class="resposive-icon mx-auto hidden h-full text-2xl" @click="toggleMenuBar" v-if="!menubarOpen"><i class="fa-solid fa-bars text-white"></i></button>
+        <button class="resposive-icon mx-auto hidden h-full text-2xl" @click="toggleMenuBar" v-if="menubarOpen"><i class="fa-solid fa-x"></i></button>
         <ul class="flex flex-wrap ul-menu" v-if="menubarOpen || windowWidth >= 780">
             <router-link to="/" class="menu-item md:w-3/12 lg:w-[11%]" :class="{ active: isRouteActive('/') }">
                 <li :class="{ 'active': currentRoute === 'home' }">Home</li>
@@ -141,7 +142,7 @@
     }
     .ul-menu{
         position: absolute;
-        top: 30px;
+        top: 48px;
         z-index: 9999999;
         @apply bg-primary block w-full
         /* display: none; */

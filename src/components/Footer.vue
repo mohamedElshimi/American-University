@@ -3,23 +3,23 @@
         <section class="py-4 bg-[#1c3160]">
             <div class="container ps-12 flex lg:justify-around md:justify-between justify-center flex-wrap mx-auto text-white">
                 <div class="lg:w-4/12 w-10/12 lg:order-none order-last">
-                <h2 class="text-4xl my-5 font-bold">ABOUT UNIVERSITY</h2>
-                <ul class="text-lg">
+                <h2 class="lg:text-3xl md:text-2xl text-lg my-5 font-bold">ABOUT UNIVERSITY</h2>
+                <ul class="md:text-lg">
                     <li class="mb-3">The American University of Science& Technology (AUST) was founded in order to fulfill the need for non-traditional higher education in the world.</li>
                     <li>We believe that we are capable of doing this.</li>
                 </ul>
                 </div>
                 <div class="lg:w-3/12 md:w-5/12 w-10/12">
-                    <h2 class="text-4xl my-5 font-bold">CONTACT US</h2>
-                    <ul class="text-lg">
+                    <h2 class="lg:text-3xl md:text-2xl text-lg my-5 font-bold">CONTACT US</h2>
+                    <ul class="md:text-lg">
                         <li class="mb-3">Address :8 Green St. kent,dover, delaware,.USA</li>
                         <li class="mb-3">Postal code:19901</li>
                         <li>Email:info@aust-edu.us</li>
                     </ul>
                 </div>
                 <div class="lg:w-3/12 md:w-5/12 w-10/12">
-                <h2 class="text-4xl my-5 font-bold">QUICK LINKS</h2>
-                <ul class="text-lg">
+                <h2 class="lg:text-3xl md:text-2xl text-lg my-5 font-bold">QUICK LINKS</h2>
+                <ul class="md:text-lg">
                     <router-link to="/"><li class="mb-5 li-dec"><span class="span-dec relative" :class="{ active2: isRouteActive('/') }">Homepage</span></li></router-link>
                     <router-link to="/AgentsNPartners"><li class="mb-5 li-dec"><span class="span-dec relative" :class="{ active2: isRouteActive('/AgentsNPartners') }">Agents & Partners</span></li></router-link>
                     <router-link to="/TestCenters"><li class="mb-5 li-dec"><span class="span-dec relative" :class="{ active2: isRouteActive('/TestCenters') }">Authorized Test Centers</span></li></router-link>
@@ -29,7 +29,7 @@
             </div>
         </section>
         <footer class="py-4 bg-[#1c2b3c] border-t-4 border-secondry text-white">
-            <p class="text-center text-lg font-semibold">Copyright &copy; www.aust-edu.us All Rights Reserved American University of Science & Technology PROGRAMED BY OTech</p>
+            <p class="text-center md:text-lg font-semibold">Copyright &copy; www.aust-edu.us All Rights Reserved American University of Science & Technology PROGRAMED BY OTech</p>
         </footer>
     </div>
 </template>

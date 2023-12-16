@@ -44,7 +44,7 @@
   @apply -rotate-90
 }
 .title1{
-  @apply text-4xl font-bold text-primary
+  @apply lg:text-4xl font-bold text-primary md:text-3xl text-xl
 }
 .active{
   @apply bg-secondry

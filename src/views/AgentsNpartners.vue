@@ -1,10 +1,10 @@
 <template>
     <div class="container mx-auto sm:px-2 px-5">
         <h1 class="title1 text-center my-5">Agents & Partners</h1>
-        <p class="text-xl">The American University of Science & Technology (AUST) has given the agency to some institutions to facilitate all educational institutions that want to become a partner of the American University of Science & Technology (AUST) and an accredited training and examination center.</p>
-        <p class="text-xl my-5">This is the list of approved agents and partners:</p>
-        <div class="w-full overflow-x-scroll">
-            <table class="w-full overflow-x-scroll">
+        <p class="lg:text-xl md:text-lg text-base">The American University of Science & Technology (AUST) has given the agency to some institutions to facilitate all educational institutions that want to become a partner of the American University of Science & Technology (AUST) and an accredited training and examination center.</p>
+        <p class="lg:text-xl md:text-lg text-base my-5">This is the list of approved agents and partners:</p>
+        <div class="w-full overflow-x-scroll my-4">
+            <table class="w-full overflow-x-scroll md:text-base text-sm">
                 <thead class="bg-primary text-white">
                     <tr>
                         <th class="rounded-tl-md">REGION</th>
