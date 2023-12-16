@@ -42,7 +42,7 @@
             </router-link>
             <li class="menu-item md:w-3/12 lg:w-[12.5%]">
                 <p @click="toggleSubMenu('1')">Graduated Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate1"></i></p>
-                <ul class="sub-menu" v-if="subMenu1 || windowWidth >= 780">
+                <ul class="sub-menu" v-if="subMenu1 || windowWidth >= 1024.999999999999999">
                     <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }">Honor Doctorate</li></router-link>
                     <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }">DBA</li></router-link>
                     <router-link to="/MBApage"><li :class="{ active: isRouteActive('/MBApage') }">MBA</li></router-link>
@@ -52,14 +52,14 @@
             </li>
             <li class="menu-item md:w-3/12 lg:w-[14.5%]">
                 <p @click="toggleSubMenu('2')">Undergraduate Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate2"></i></p>
-                <ul class="sub-menu" v-if="subMenu2 || windowWidth >= 780">
+                <ul class="sub-menu" v-if="subMenu2 || windowWidth >= 1024.999999999999999">
                     <router-link to="/ProfessionalBachelor"><li :class="{ active: isRouteActive('/ProfessionalBachelor') }">Professional Bachelor</li></router-link>
                     <router-link to="/ProfessionalDiploma"><li :class="{ active: isRouteActive('/ProfessionalDiploma') }">Professional Diploma</li></router-link>
                 </ul>
             </li>
             <li class="menu-item md:w-3/12 lg:w-[12.5%]">
                 <p @click="toggleSubMenu('3')">Programs<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate3"></i></p>
-                <ul class="sub-menu" v-if="subMenu3 || windowWidth >= 780">
+                <ul class="sub-menu" v-if="subMenu3 || windowWidth >= 1024.999999999999999">
                     <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }">Honor Doctorate</li></router-link>
                     <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }">DBA</li></router-link>
                     <router-link to="/ProfessionalDoctorate"><li :class="{ active: isRouteActive('/ProfessionalDoctorate') }">Professional Doctorate Degree</li></router-link>
@@ -172,6 +172,7 @@
 .responsive-icon{
     display: none;
 }
+/* min-width: 1200px */
 @media (max-width: 767.999999999999999px){
     .resposive-icon{
         display: block;

@@ -36,7 +36,7 @@
 .sub-menu li{
   @apply px-3 py-3 text-white hover:bg-secondry-600 text-start hover:cursor-pointer
 }
-@media (min-width: 767.999999999999999px){
+@media (min-width: 1024.999999999999999px){
   .menu-item:hover i{
     @apply -rotate-90
   } 

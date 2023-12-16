@@ -8,7 +8,7 @@ import Footer from './components/Footer.vue';
 
   <main>
     <NavBar></NavBar>
-    <RouterView />
+    <RouterView class="overflow-hidden"/>
     <Footer></Footer>
     <!-- <img src="./assets/2023-12-10.png" alt=""> -->
   </main>
