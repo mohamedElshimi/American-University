@@ -75,8 +75,8 @@
             <router-link to="/TestCenters" class="menu-item md:w-3/12 lg:w-[13.5%]">
                 <li :class="{ active: isRouteActive('/TestCenters') }"><p>Authorized Test Centers</p></li>
             </router-link>
-            <router-link to="/ContactUs" class="menu-item md:w-3/12 lg:w-[11%]" :class="{ active: isRouteActive('/ContactUs') }">
-                <li ><p>Contact Us</p></li>
+            <router-link to="/ContactUs" class="menu-item md:w-3/12 lg:w-[11%]">
+                <li :class="{ active: isRouteActive('/ContactUs') }"><p>Contact Us</p></li>
             </router-link>
         </ul>
     </nav>
@@ -109,6 +109,7 @@
             },
             toggleMenuBar(){
                 this.menubarOpen = !this.menubarOpen;
+                this.closeAllSub();
             },
             updateWindowWidth() {
                 this.windowWidth = window.innerWidth;
@@ -137,13 +138,20 @@
                     this.iconRotate3 = this.subMenu3 ? '-rotate-90' : 'rotate-0'
                 }
             },
+            closeAllSub(){
+                this.subMenu3= false;
+                this.subMenu2= false;
+                this.subMenu1= false;
+                this.iconRotate1 = this.subMenu1 ? '-rotate-90' : 'rotate-0'
+                this.iconRotate2 = this.subMenu2 ? '-rotate-90' : 'rotate-0'
+                this.iconRotate3 = this.subMenu3 ? '-rotate-90' : 'rotate-0'
+            },
             isRouteActive(route) {
                 return this.$route.fullPath === route;
             },
 
         },
         beforeUnmount() {
-            // Remove the resize event listener when the component is unmounted
             window.removeEventListener('resize', this.updateWindowWidth);
         },
         mounted() {
@@ -180,7 +188,7 @@
         @apply py-3
     }
     .sub-menu{
-        @apply static
+        @apply static w-full
     }
     .sub-menu li{
         @apply w-full static

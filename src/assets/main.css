@@ -28,7 +28,7 @@
 }
 
 .menu-item{
-  @apply lg:w-[12.5%] text-center py-3 relative hover:cursor-pointer
+  @apply lg:w-[12.5%] text-center relative hover:cursor-pointer
 }
 .sub-menu{
   @apply bg-primary  text-black absolute z-30 top-12 left-0 w-[150%] hidden transition-all duration-500 delay-75
@@ -41,7 +41,9 @@
     @apply -rotate-90
   } 
 }
-
+.menu-item p{
+  @apply py-3
+}
 .menu-item:hover .sub-menu{
   @apply block transition-all duration-500
 }
