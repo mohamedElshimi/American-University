@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name:'ProfessionalBachelor'
+        name:'ProfessionalBachelor',
     }
 </script>
 

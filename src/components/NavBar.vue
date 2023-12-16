@@ -10,12 +10,12 @@
                     <p>Quick Links</p>
                     <i class="fa-solid fa-chevron-down ms-2 transition-all duration-500" :class="iconRotate"></i>
                 </button>
-                <ul class="border absolute z-[10000000] text-black bg-white p-0 mt-11" v-if="quickLinks">
-                    <router-link to="/GraduatedStudies" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/GraduatedStudies') }"><li>Graduated Studies</li></router-link><hr>
-                    <router-link to="/UndergraduateStudies" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/UndergraduateStudies') }"><li>Undergraduate Studies</li></router-link><hr>
-                    <router-link to="/AgentsNpartners" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/AgentsNpartners') }"><li>Agents & Partners</li></router-link><hr>
-                    <router-link to="/TestCenters" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/TestCenters') }"><li>Authorized Test Centers</li></router-link><hr>
-                    <router-link to="/ContactUs" class="block py-1 hover:bg-slate-100 w-full px-3" :class="{ active: isRouteActive('/ContactUs') }"><li>Contact Us</li></router-link><hr>
+                <ul class="border absolute z-[10000000] text-black bg-white p-0 mt-[40.2px]" v-if="quickLinks">
+                    <router-link to="/GraduatedStudies" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/GraduatedStudies') }"><li>Graduated Studies</li></router-link><hr>
+                    <router-link to="/UndergraduateStudies" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/UndergraduateStudies') }"><li>Undergraduate Studies</li></router-link><hr>
+                    <router-link to="/AgentsNpartners" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/AgentsNpartners') }"><li>Agents & Partners</li></router-link><hr>
+                    <router-link to="/TestCenters" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/TestCenters') }"><li>Authorized Test Centers</li></router-link><hr>
+                    <router-link to="/ContactUs" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/ContactUs') }"><li>Contact Us</li></router-link><hr>
                 </ul>
                 <router-link to="/RegisterPage" class="secondry-button ms-3">Register</router-link>
             </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="container mx-auto py-3 flex items-center justify-between sm:px-2 px-5">
         <div class="w-1/3">
-            <img src="../assets/final-logo-1024x325.jpg" alt="American University" />
+            <a href="/"><img src="../assets/final-logo-1024x325.jpg" alt="American University" /></a>
         </div>
         <div class="flex md:w-1/2 w-2/3 justify-end">
             <div><input type="text" class="input-field w-full" placeholder="Enter a Registration-ID"></div>
