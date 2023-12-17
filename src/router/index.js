@@ -16,6 +16,15 @@ import UndergraduateStudies from '../views/UndergraduateStudies.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import AgentsNpartners from '../views/AgentsNpartners.vue'
 import TestCenters from '../views/TestCenters.vue'
+import digitalLibrary from '../views/digitalLibrary.vue'
+import ourMainTarget from '../views/ourMainTarget.vue'
+import SingleTag from '../views/SingleTag.vue'
+import BodyCameras from '../views/BodyCameras.vue'
+import SingleCameraTag from '../views/SingleCameraTag.vue'
+import USTeens from '../views/USTeens.vue'
+import SingleTeensTag from '../views/SingleTeensTag.vue'
+import SouthAfrican from '../views/SouthAfrican.vue'
+import SingleAfricanTag from '../views/SingleAfricanTag.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -104,6 +113,51 @@ const router = createRouter({
       path: '/TestCenters',
       name: 'TestCenters',
       component: TestCenters
+    },
+    {
+      path: '/digitalLibrary',
+      name: 'digitalLibrary',
+      component: digitalLibrary
+    },
+    {
+      path: '/ourMainTarget',
+      name: 'ourMainTarget',
+      component: ourMainTarget
+    },
+    {
+      path: '/SingleTag/:name',
+      name: 'SingleTag',
+      component: SingleTag
+    },
+    {
+      path: '/BodyCameras',
+      name: 'BodyCameras',
+      component: BodyCameras
+    },
+    {
+      path: '/USTeens',
+      name: 'USTeens',
+      component: USTeens
+    },
+    {
+      path: '/SouthAfrican',
+      name: 'SouthAfrican',
+      component: SouthAfrican
+    },
+    {
+      path: '/SingleCameraTag/:name',
+      name: 'SingleCameraTag',
+      component: SingleCameraTag
+    },
+    {
+      path: '/SingleTeensTag/:name',
+      name: 'SingleTeensTag',
+      component: SingleTeensTag
+    },
+    {
+      path: '/SingleAfricanTag/:name',
+      name: 'SingleAfricanTag',
+      component: SingleAfricanTag
     },
   ]
 })

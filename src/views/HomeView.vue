@@ -10,12 +10,12 @@
           <h3 class="lg:text-2xl md:text-xl text-lg mt-3 text-primary underline text-center font-bold">About University</h3>
         </div>
       </a>
-      <a href="" class="lg:w-4/12 md:w-6/12">
+      <router-link to="/digitalLibrary" class="lg:w-4/12 md:w-6/12">
         <div>
         <img src="../assets/digital-library.jpg" alt="digital-library" class=" hover:scale-105">
         <h3 class="lg:text-2xl md:text-xl text-lg mt-3 text-primary underline text-center font-bold">Digital Library</h3>
       </div>
-      </a>
+      </router-link>
       <a href="" class="lg:w-4/12 md:w-6/12">
         <div>
         <img src="../assets/sholarship-programs.jpg" alt="sholarship-programs" class=" hover:scale-105">

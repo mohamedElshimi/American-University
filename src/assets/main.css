@@ -7,7 +7,7 @@
 }
 
 .secondry-button {
-  @apply bg-secondry text-white px-5 p-2 rounded-md;
+  @apply bg-secondry text-white px-5 p-2 rounded-md hover:bg-secondry-600;
 }
 
 .secondry2-button {
@@ -52,4 +52,16 @@
 }
 .active{
   @apply bg-secondry
+}
+.card{
+  @apply bg-white rounded shadow-lg mt-5
+}
+.card-image{
+  @apply w-full h-36 object-cover rounded-t
+}
+.card-title{
+  @apply text-xl font-semibold mb-4 px-5
+}
+.card-body{
+  @apply text-gray-600 mb-4 px-5
 }

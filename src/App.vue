@@ -13,7 +13,6 @@ import Footer from './components/Footer.vue';
     <!-- <img src="./assets/2023-12-10.png" alt=""> -->
   </main>
 </template>
-
 <style scoped>
 main{
   min-height: 100vh;
