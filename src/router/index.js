@@ -25,6 +25,8 @@ import USTeens from '../views/USTeens.vue'
 import SingleTeensTag from '../views/SingleTeensTag.vue'
 import SouthAfrican from '../views/SouthAfrican.vue'
 import SingleAfricanTag from '../views/SingleAfricanTag.vue'
+import BeautyChildhood from '../views/BeautyChildhood.vue'
+import SingleChildhoodTag from '../views/SingleChildhoodTag.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -145,6 +147,11 @@ const router = createRouter({
       component: SouthAfrican
     },
     {
+      path: '/BeautyChildhood',
+      name: 'BeautyChildhood',
+      component: BeautyChildhood
+    },
+    {
       path: '/SingleCameraTag/:name',
       name: 'SingleCameraTag',
       component: SingleCameraTag
@@ -158,6 +165,11 @@ const router = createRouter({
       path: '/SingleAfricanTag/:name',
       name: 'SingleAfricanTag',
       component: SingleAfricanTag
+    },
+    {
+      path: '/SingleChildhoodTag/:name',
+      name: 'SingleChildhoodTag',
+      component: SingleChildhoodTag
     },
   ]
 })

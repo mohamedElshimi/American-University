@@ -102,11 +102,11 @@
                             <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
                         </div>
                         <!-- Card Title -->
-                        <a href="" class="text-blue-500 hover:underline"><h2 class="card-title">The Beauty of the Childhood</h2></a>
+                        <router-link to="/BeautyChildhood" class="text-blue-500 hover:underline"><h2 class="card-title">The Beauty of the Childhood</h2></router-link>
                         <!-- Card Body -->
                         <p class="card-body">After years of watching Vancouver housing prices climb, driven in part by Chinese investment, Eveline Xia came to a painful realization: Despite having a Master’s degree and solid career prospects.</p>
                         <!-- Read more link -->
-                        <a href="#" class="text-blue-500 hover:underline mx-5">Read more</a>
+                        <router-link to="/BeautyChildhood" class="text-blue-500 hover:underline mx-5">Read more</router-link>
                         <hr class="my-3 mt-4 mx-0">
                         <div class="flex justify-between px-5 text-xs">
                             <span class="text-gray-400">August 9, 2018</span>
