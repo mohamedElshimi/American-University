@@ -27,6 +27,14 @@ import SouthAfrican from '../views/SouthAfrican.vue'
 import SingleAfricanTag from '../views/SingleAfricanTag.vue'
 import BeautyChildhood from '../views/BeautyChildhood.vue'
 import SingleChildhoodTag from '../views/SingleChildhoodTag.vue'
+import ScholarshipAdmission from '../views/ScholarshipAdmission.vue'
+import singleQualityManagement from '../views/singleQualityManagement.vue'
+import ProjectManagment from '../views/ProjectManagment.vue'
+import BusinessesAdministration from '../views/BusinessesAdministration.vue'
+import ResourcesManagment from '../views/ResourcesManagment.vue'
+import HospitalManagement from '../views/HospitalManagement.vue'
+import AppliedNutrition from '../views/AppliedNutrition.vue'
+import InfectionControl from '../views/InfectionControl.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -170,6 +178,46 @@ const router = createRouter({
       path: '/SingleChildhoodTag/:name',
       name: 'SingleChildhoodTag',
       component: SingleChildhoodTag
+    },
+    {
+      path: '/ScholarshipAdmission',
+      name: 'ScholarshipAdmission',
+      component: ScholarshipAdmission
+    },
+    {
+      path: '/singleQualityManagement',
+      name: 'singleQualityManagement',
+      component: singleQualityManagement
+    },
+    {
+      path: '/ProjectManagment',
+      name: 'ProjectManagment',
+      component: ProjectManagment
+    },
+    {
+      path: '/BusinessesAdministration',
+      name: 'BusinessesAdministration',
+      component: BusinessesAdministration
+    },
+    {
+      path: '/ResourcesManagment',
+      name: 'ResourcesManagment',
+      component: ResourcesManagment
+    },
+    {
+      path: '/HospitalManagement',
+      name: 'HospitalManagement',
+      component: HospitalManagement
+    },
+    {
+      path: '/AppliedNutrition',
+      name: 'AppliedNutrition',
+      component: AppliedNutrition
+    },
+    {
+      path: '/InfectionControl',
+      name: 'InfectionControl',
+      component: InfectionControl
     },
   ]
 })
