@@ -82,7 +82,7 @@
       </div>
     </section>
     <section class="mt-10 container flex mx-auto flex-wrap text-center sm:px-2 px-5">
-      <router-link to="/ProfessionalMaster" class="hover:underline"><h2 class="md:text-2xl text-xl font-bold w-full mb-3">Professional Master Degree</h2></router-link>
+      <router-link to="/ProfessionalMaster" class="hover:underline w-full"><h2 class="md:text-2xl text-xl font-bold mb-3">Professional Master Degree</h2></router-link>
       <div class="lg:w-4/12 md:w-6/12 mx-auto pb-3 w-full shadow-lg mb-4 border-t-4 border-secondry">
         <router-link to="/HospitalManagement"><img src="../assets/hospital-management.jpg" class="w-full" alt=""></router-link>
         <router-link to="/HospitalManagement" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">Master in Hospital Management</h3></router-link>
@@ -123,9 +123,9 @@
         <p class="lg:text-lg text-base px-1 font-semibold">This fraud prevention system can be used to verify AUST credentials held by candidates world-wide. The Credential Identification Code can be found on all certificates issued by AUST. Upon entering the Identification Code or your email, authentication details relating to the holder of the credentials will be presented.</p>
         <div class="flex flex-wrap my-5">
           <div class=" md:w-8/12 w-full pe-3 md:mb-0 mb-3">
-            <input type="text" placeholder="Enter a Registration-ID." class="input-field text-black">
+            <input type="text" placeholder="Enter a Registration-ID." class="input-field text-black" v-model="searchData">
           </div>
-          <button class="secondry-button md:w-4/12 w-6/12 md:mx-0 mx-auto">Search</button>
+          <button class="secondry-button md:w-4/12 w-6/12 md:mx-0 mx-auto" @click="searchRegistrID">Search</button>
         </div>
       </div>
     </section>
@@ -135,9 +135,22 @@
 </template>
 
 <script>
+import router from '@/router';
   export default {
     name:'HomeView',
     data(){
+      return{
+        searchData:''
+      }
+    },
+    methods:{
+      searchRegistrID(){
+        if (this.searchData == '') {
+          return;
+        } else {
+          this.$router.push('/CertificatePage')
+        }
+      }
     }
   }
 </script>

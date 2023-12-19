@@ -35,6 +35,7 @@ import ResourcesManagment from '../views/ResourcesManagment.vue'
 import HospitalManagement from '../views/HospitalManagement.vue'
 import AppliedNutrition from '../views/AppliedNutrition.vue'
 import InfectionControl from '../views/InfectionControl.vue'
+import CertificatePage from '../views/CertificatePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -218,6 +219,11 @@ const router = createRouter({
       path: '/InfectionControl',
       name: 'InfectionControl',
       component: InfectionControl
+    },
+    {
+      path: '/CertificatePage',
+      name: 'CertificatePage',
+      component: CertificatePage
     },
   ]
 })
