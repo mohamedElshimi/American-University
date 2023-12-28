@@ -22,10 +22,10 @@
         </div>
     </div>
     <div class=" mx-auto relative pt-3 flex flex-wrap items-center justify-between sm:my-0 my-5">
-        <div class="w-1/3 container sm:ms-8 ps-5">
+        <div class="w-1/3 container ps-5">
             <a href="/"><img src="../assets/final-logo-1024x325.jpg" alt="American University" /></a>
         </div>
-        <div class="sm:flex md:w-1/2 w-2/3 justify-end sm:me-8 pe-5 container hidden">
+        <div class="sm:flex md:w-1/2 w-2/3 justify-end pe-5 container hidden">
             <div><input type="text" class="input-field w-full" placeholder="Enter a Registration-ID"></div>
             <button class="secondry-button ms-2">Verify</button>
         </div>
