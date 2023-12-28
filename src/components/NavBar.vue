@@ -1,12 +1,12 @@
 <template>
     <div class="bg-primary flex py-3">
-        <div class="container mx-auto flex flex-wrap items-center md:justify-between justify-center sm:px-2 px-5">
+        <div class="container mx-auto flex flex-wrap items-center justify-between sm:px-2 px-5">
             <div class="flex items-center sm:mb-0 mb-5">
                 <i class="fa-solid fa-envelope text-secondry text-lg"></i>
                 <p class="ms-2 text-white text-[17px]">info@aust-edu.us</p>
             </div>
             <div class="flex">
-                <button class="flex items-center text-white border border-2 py-1 px-2 font-bold text-base" @click="toggleQuickLinks">
+                <button class="md:flex items-center text-white border hidden border-2 py-1 px-2 font-bold text-base" @click="toggleQuickLinks">
                     <p>Quick Links</p>
                     <i class="fa-solid fa-chevron-down ms-2 transition-all duration-500" :class="iconRotate"></i>
                 </button>
@@ -21,65 +21,65 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto py-3 flex items-center justify-between sm:px-2 px-5">
-        <div class="w-1/3">
+    <div class=" mx-auto relative pt-3 flex flex-wrap items-center justify-between sm:my-0 my-5">
+        <div class="w-1/3 container sm:ms-8 ps-5">
             <a href="/"><img src="../assets/final-logo-1024x325.jpg" alt="American University" /></a>
         </div>
-        <div class="flex md:w-1/2 w-2/3 justify-end">
+        <div class="sm:flex md:w-1/2 w-2/3 justify-end sm:me-8 pe-5 container hidden">
             <div><input type="text" class="input-field w-full" placeholder="Enter a Registration-ID"></div>
             <button class="secondry-button ms-2">Verify</button>
         </div>
-    </div>
-    <nav class="bg-white relative border-gray-200 md:py-0 py-2 dark:text-white dark:bg-primary dark:border-gray-700">
-        <button class="resposive-icon mx-auto hidden h-full text-2xl" @click="toggleMenuBar" v-if="!menubarOpen"><i class="fa-solid fa-bars text-white"></i></button>
-        <button class="resposive-icon mx-auto hidden h-full text-2xl" @click="toggleMenuBar" v-if="menubarOpen"><i class="fa-solid fa-x"></i></button>
-        <ul class="flex flex-wrap ul-menu" v-if="menubarOpen || windowWidth >= 780">
-            <router-link to="/" class="menu-item md:w-3/12 lg:w-[11%]" :class="{ active: isRouteActive('/') }">
-                <li :class="{ 'active': currentRoute === 'home' }" @click="toggleMenuBar"><p>Home</p></li>
-            </router-link>
-            <router-link to="/about" class="menu-item md:w-3/12 lg:w-[12.5%]" :class="{ active: isRouteActive('/about') }">
-                <li :class="{ 'active': currentRoute === 'about' }" @click="toggleMenuBar"><p>About University</p></li>
-            </router-link>
-            <li class="menu-item md:w-3/12 lg:w-[12.5%]">
-                <p @click="toggleSubMenu('1')">Graduated Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate1"></i></p>
-                <ul class="sub-menu" v-if="subMenu1 || windowWidth >= 1024.999999999999999">
-                    <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }" @click="toggleMenuBar">Honor Doctorate</li></router-link>
-                    <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }" @click="toggleMenuBar">DBA</li></router-link>
-                    <router-link to="/MBApage"><li :class="{ active: isRouteActive('/MBApage') }" @click="toggleMenuBar">MBA</li></router-link>
-                    <router-link to="/ProfessionalDoctorate"><li :class="{ active: isRouteActive('/ProfessionalDoctorate') }" @click="toggleMenuBar">Professional Doctorate Degree</li></router-link>
-                    <router-link to="/ProfessionalMaster"><li :class="{ active: isRouteActive('/ProfessionalMaster') }" @click="toggleMenuBar">Professional Master Degree</li></router-link>
-                </ul>
-            </li>
-            <li class="menu-item md:w-3/12 lg:w-[14.5%]">
-                <p @click="toggleSubMenu('2')">Undergraduate Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate2"></i></p>
-                <ul class="sub-menu" v-if="subMenu2 || windowWidth >= 1024.999999999999999">
-                    <router-link to="/ProfessionalBachelor"><li :class="{ active: isRouteActive('/ProfessionalBachelor') }" @click="toggleMenuBar">Professional Bachelor</li></router-link>
-                    <router-link to="/ProfessionalDiploma"><li :class="{ active: isRouteActive('/ProfessionalDiploma') }" @click="toggleMenuBar">Professional Diploma</li></router-link>
-                </ul>
-            </li>
-            <li class="menu-item md:w-3/12 lg:w-[12.5%]">
-                <p @click="toggleSubMenu('3')">Programs<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate3"></i></p>
-                <ul class="sub-menu" v-if="subMenu3 || windowWidth >= 1024.999999999999999">
-                    <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }" @click="toggleMenuBar">Honor Doctorate</li></router-link>
-                    <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }" @click="toggleMenuBar">DBA</li></router-link>
-                    <router-link to="/ProfessionalDoctorate"><li :class="{ active: isRouteActive('/ProfessionalDoctorate') }" @click="toggleMenuBar">Professional Doctorate Degree</li></router-link>
-                    <router-link to="/MBApage"><li :class="{ active: isRouteActive('/MBApage') }" @click="toggleMenuBar">MBA</li></router-link>
-                    <router-link to="/ProfessionalMaster"><li :class="{ active: isRouteActive('/ProfessionalMaster') }" @click="toggleMenuBar">Professional Master Degree</li></router-link>
-                    <router-link to="/ProfessionalBachelor"><li :class="{ active: isRouteActive('/ProfessionalBachelor') }" @click="toggleMenuBar">Professional Bachelor</li></router-link>
-                    <router-link to="/ProfessionalDiploma"><li :class="{ active: isRouteActive('/ProfessionalDiploma') }" @click="toggleMenuBar">Professional Diploma</li></router-link>
-                </ul>
-            </li>
-            <router-link to="/AgentsNpartners" class="menu-item md:w-3/12 lg:w-[12.5%]">
-                <li :class="{ active: isRouteActive('/AgentsNpartners') }" @click="toggleMenuBar"><p>Agents & Partners</p></li>
-            </router-link>
-            <router-link to="/TestCenters" class="menu-item md:w-3/12 lg:w-[13.5%]">
-                <li :class="{ active: isRouteActive('/TestCenters') }" @click="toggleMenuBar"><p>Authorized Test Centers</p></li>
-            </router-link>
-            <router-link to="/ContactUs" class="menu-item md:w-3/12 lg:w-[11%]">
-                <li :class="{ active: isRouteActive('/ContactUs') }" @click="toggleMenuBar"><p>Contact Us</p></li>
-            </router-link>
-        </ul>
-    </nav>
+        <nav class="bg-white sm:relative static sm:w-full w-auto sm:me-0 me-5 border-gray-200 md:py-0 py-2 dark:text-white dark:bg-primary dark:border-gray-700">
+            <button class="resposive-icon mx-auto hidden h-full text-2xl px-2" @click="toggleMenuBar" v-if="!menubarOpen"><i class="fa-solid fa-bars text-white"></i></button>
+            <button class="resposive-icon mx-auto hidden h-full text-2xl px-2" @click="toggleMenuBar" v-if="menubarOpen"><i class="fa-solid fa-x"></i></button>
+            <ul class="flex flex-wrap top-[75px] sm:top-[47px] ul-menu right-0 py-2" v-if="menubarOpen || windowWidth >= 780">
+                <router-link to="/" class="menu-item md:w-3/12 lg:w-[11%]" :class="{ active: isRouteActive('/') }">
+                    <li class="border-r-2 border-white" :class="{ 'active': currentRoute === 'home' }" @click="toggleMenuBar"><p>Home</p></li>
+                </router-link>
+                <router-link to="/about" class="menu-item md:w-3/12 lg:w-[12.5%]" :class="{ active: isRouteActive('/about') }">
+                    <li class="border-r-2 border-white" :class="{ 'active': currentRoute === 'about' }" @click="toggleMenuBar"><p>About University</p></li>
+                </router-link>
+                <li class="menu-item md:w-3/12 lg:w-[12.5%] border-r-2 border-white">
+                    <p @click="toggleSubMenu('1')">Graduated Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate1"></i></p>
+                    <ul class="sub-menu" v-if="subMenu1 || windowWidth >= 1024.999999999999999">
+                        <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }" @click="toggleMenuBar">Honor Doctorate</li></router-link>
+                        <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }" @click="toggleMenuBar">DBA</li></router-link>
+                        <router-link to="/MBApage"><li :class="{ active: isRouteActive('/MBApage') }" @click="toggleMenuBar">MBA</li></router-link>
+                        <router-link to="/ProfessionalDoctorate"><li :class="{ active: isRouteActive('/ProfessionalDoctorate') }" @click="toggleMenuBar">Professional Doctorate Degree</li></router-link>
+                        <router-link to="/ProfessionalMaster"><li :class="{ active: isRouteActive('/ProfessionalMaster') }" @click="toggleMenuBar">Professional Master Degree</li></router-link>
+                    </ul>
+                </li>
+                <li class="menu-item md:w-3/12 lg:w-[14.5%] border-r-2 border-white">
+                    <p @click="toggleSubMenu('2')">Undergraduate Studies<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate2"></i></p>
+                    <ul class="sub-menu" v-if="subMenu2 || windowWidth >= 1024.999999999999999">
+                        <router-link to="/ProfessionalBachelor"><li :class="{ active: isRouteActive('/ProfessionalBachelor') }" @click="toggleMenuBar">Professional Bachelor</li></router-link>
+                        <router-link to="/ProfessionalDiploma"><li :class="{ active: isRouteActive('/ProfessionalDiploma') }" @click="toggleMenuBar">Professional Diploma</li></router-link>
+                    </ul>
+                </li>
+                <li class="menu-item md:w-3/12 lg:w-[12.5%] border-r-2 border-white">
+                    <p @click="toggleSubMenu('3')">Programs<i class="fa-solid fa-chevron-down ms-2 transition-all duration-700" :class="iconRotate3"></i></p>
+                    <ul class="sub-menu" v-if="subMenu3 || windowWidth >= 1024.999999999999999">
+                        <router-link to="/honordoctor"><li :class="{ active: isRouteActive('/honordoctor') }" @click="toggleMenuBar">Honor Doctorate</li></router-link>
+                        <router-link to="/DPApage"><li :class="{ active: isRouteActive('/DPApage') }" @click="toggleMenuBar">DBA</li></router-link>
+                        <router-link to="/ProfessionalDoctorate"><li :class="{ active: isRouteActive('/ProfessionalDoctorate') }" @click="toggleMenuBar">Professional Doctorate Degree</li></router-link>
+                        <router-link to="/MBApage"><li :class="{ active: isRouteActive('/MBApage') }" @click="toggleMenuBar">MBA</li></router-link>
+                        <router-link to="/ProfessionalMaster"><li :class="{ active: isRouteActive('/ProfessionalMaster') }" @click="toggleMenuBar">Professional Master Degree</li></router-link>
+                        <router-link to="/ProfessionalBachelor"><li :class="{ active: isRouteActive('/ProfessionalBachelor') }" @click="toggleMenuBar">Professional Bachelor</li></router-link>
+                        <router-link to="/ProfessionalDiploma"><li :class="{ active: isRouteActive('/ProfessionalDiploma') }" @click="toggleMenuBar">Professional Diploma</li></router-link>
+                    </ul>
+                </li>
+                <router-link to="/AgentsNpartners" class="menu-item md:w-3/12 lg:w-[12.5%] border-r-2 border-white">
+                    <li :class="{ active: isRouteActive('/AgentsNpartners') }" @click="toggleMenuBar"><p>Agents & Partners</p></li>
+                </router-link>
+                <router-link to="/TestCenters" class="menu-item md:w-3/12 lg:w-[13.5%] border-r-2 border-white">
+                    <li :class="{ active: isRouteActive('/TestCenters') }" @click="toggleMenuBar"><p>Authorized Test Centers</p></li>
+                </router-link>
+                <router-link to="/ContactUs" class="menu-item md:w-3/12 lg:w-[11%]">
+                    <li :class="{ active: isRouteActive('/ContactUs') }" @click="toggleMenuBar"><p>Contact Us</p></li>
+                </router-link>
+            </ul>
+        </nav>
+</div>
 
 </template>
 
@@ -180,8 +180,8 @@
     }
     .ul-menu{
         position: absolute;
-        top: 48px;
         z-index: 9999999;
+        width: 100vw;
         @apply bg-primary block w-full
         /* display: none; */
     }
