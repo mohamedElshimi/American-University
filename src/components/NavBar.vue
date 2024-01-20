@@ -5,12 +5,14 @@
                 <i class="fa-solid fa-envelope text-secondry text-lg"></i>
                 <p class="ms-2 text-white text-[17px]">info@aust-edu.us</p>
             </div>
-            <div class="flex">
-                <button class="md:flex items-center text-white border hidden border-2 py-1 px-2 font-bold text-base" @click="toggleQuickLinks">
+            <div class="flex relative">
+                <button class="resposive-icon mx-auto hidden h-full text-2xl px-2" @click="toggleQuickLinksToggler" v-if="!mdQuickLinks"><i class="fa-solid fa-bars text-white"></i></button>
+                <button class="resposive-icon mx-auto text-white hidden h-full text-2xl px-2" @click="toggleQuickLinksToggler" v-if="mdQuickLinks"><i class="fa-solid fa-x"></i></button>
+                <button class="flex items-center text-white md:static absolute bg-slate-400 z-10 right-[50%] top-12 w-[150px] px-3 border-2 py-1 md:px-2 font-bold text-base" @click="toggleQuickLinks" v-if="mdQuickLinks">
                     <p>Quick Links</p>
                     <i class="fa-solid fa-chevron-down ms-2 transition-all duration-500" :class="iconRotate"></i>
                 </button>
-                <ul class="border absolute z-[10000000] text-black bg-white p-0 mt-[40.2px]" v-if="quickLinks">
+                <ul class="border absolute z-[10000000] text-black bg-white p-0 md:top-[42.5px] top-[80px] md:right-[42%] right-[50%] md:w-full w-[150px]" v-if="quickLinks">
                     <router-link to="/GraduatedStudies" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/GraduatedStudies') }" @click="toggleQuickLinks"><li>Graduated Studies</li></router-link><hr>
                     <router-link to="/UndergraduateStudies" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/UndergraduateStudies') }" @click="toggleQuickLinks"><li>Undergraduate Studies</li></router-link><hr>
                     <router-link to="/AgentsNpartners" class="block py-1 hover:bg-secondry-600 w-full px-3" :class="{ active: isRouteActive('/AgentsNpartners') }" @click="toggleQuickLinks"><li>Agents & Partners</li></router-link><hr>
@@ -79,7 +81,7 @@
                 </router-link>
             </ul>
         </nav>
-</div>
+    </div>
 
 </template>
 
@@ -99,7 +101,7 @@
                 subMenu1: false,
                 subMenu2: false,
                 subMenu3: false,
-                
+                mdQuickLinks: false,
             }
         },
         methods:{
@@ -113,6 +115,10 @@
             },
             updateWindowWidth() {
                 this.windowWidth = window.innerWidth;
+            },
+            toggleQuickLinksToggler(){
+                this.mdQuickLinks = !this.mdQuickLinks;
+                
             },
             toggleSubMenu(num){
                 if (this.windowWidth < 1024) {

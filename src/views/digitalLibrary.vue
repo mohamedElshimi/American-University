@@ -14,38 +14,35 @@
             <div class="my-10">
                 <h3 class="lg:text-3xl md:text-2xl text-xl font-semibold text-gray-800">Books and Researches</h3>
                 <div class="flex flex-wrap">
-                    <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3">
+                    <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3" v-for="(Lib,index) in digitalLib" :key="index">
                         <div class="card h-full">
                             <!-- Card Header with Image -->
                             <div class="mb-4 relative">
                                 <h6 class="bg-[#00000099] text-white px-3 text-sm rounded-lg absolute right-5 top-4">ADVERISEMENT</h6>
-                                <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
+                                <img :src="Lib.media[0].url" alt="Card Image" class="card-image" />
                             </div>
                             <!-- Card Title -->
-                            <router-link to="/ourMainTarget" class="text-blue-500 hover:underline"><h2 class="card-title">Our main target is to “Developing Yourself as a Leader”</h2></router-link>
+                            <router-link :to="`/SingleResearch/${Lib.id}`" class="text-blue-500 hover:underline"><h2 class="card-title">{{ Lib.title }}</h2></router-link>
                             <!-- Card Body -->
-                            <p class="card-body">The upcoming budget for the Chicago Public Schools</p>
+                            <p class="card-body">{{ Lib.description }}</p>
                             <!-- Read more link -->
-                            <router-link to="/ourMainTarget" class="text-blue-500 hover:underline mx-5">Read more</router-link>
+                            <router-link :to="`/SingleResearch/${Lib.id}`" class="text-blue-500 hover:underline mx-5">Read more</router-link>
                             <hr class="my-3 mx-0">
                             <div class="flex justify-between px-5 text-xs">
-                                <span class="text-gray-400">August 9, 2018</span>
-                                <span class="text-gray-400">No Comments</span>
+                                <span class="text-gray-400">{{ Lib.create_date }}</span>
+                                <span class="text-gray-400" v-if="!Lib.comments_count">No Comment</span>
+                                <span class="text-gray-400" v-if="Lib.comments_count">{{ Lib.comments_count }} Comment</span>
                             </div>
                         </div>
                     </div>
                     <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3">
                         <div class="card h-full">
-                        <!-- Card Header with Image -->
                         <div class="mb-4 relative">
                             <h6 class="bg-[#00000099] text-white px-3 text-sm rounded-lg absolute right-5 top-4">TECHNOLOGY</h6>
                             <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
                         </div>
-                        <!-- Card Title -->
                         <router-link to="/BodyCameras" class="text-blue-500 hover:underline"><h2 class="card-title">Body Cameras on Public-School Educators</h2></router-link>
-                        <!-- Card Body -->
                         <p class="card-body">Some of can’t rely on stable worlds economic</p>
-                        <!-- Read more link -->
                         <router-link to="/BodyCameras" class="text-blue-500 hover:underline mx-5">Read more</router-link>
                         <hr class="my-3 mt-9 mx-0">
                         <div class="flex justify-between px-5 text-xs">
@@ -56,16 +53,12 @@
                     </div>
                     <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3">
                         <div class="card h-full">
-                        <!-- Card Header with Image -->
                         <div class="mb-4 relative">
                             <h6 class="bg-[#00000099] text-white px-3 text-sm rounded-lg absolute right-5 top-4">HOBBIES</h6>
                             <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
                         </div>
-                        <!-- Card Title -->
                         <router-link to="/USTeens" class="text-blue-500 hover:underline"><h2 class="card-title">US Teens Win International Rocketry Challenge</h2></router-link>
-                        <!-- Card Body -->
                         <p class="card-body">Throughout the United States, police officers are beginning</p>
-                        <!-- Read more link -->
                         <router-link to="/USTeens" class="text-blue-500 hover:underline mx-5">Read more</router-link>
                         <hr class="my-3 mx-0">
                         <div class="flex justify-between px-5 text-xs">
@@ -76,16 +69,12 @@
                     </div>
                     <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3">
                         <div class="card h-full">
-                        <!-- Card Header with Image -->
                         <div class="mb-4 relative">
                             <h6 class="bg-[#00000099] text-white px-3 text-sm rounded-lg absolute right-5 top-4">HOBBIES</h6>
                             <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
                         </div>
-                        <!-- Card Title -->
                         <router-link to="/SouthAfrican" class="text-blue-500 hover:underline"><h2 class="card-title">South African universities trail other BRICS</h2></router-link>
-                        <!-- Card Body -->
                         <p class="card-body">South Africa has eight of the top 15 universities in Africa but its higher learning institutions are rated as the worst performing among the BRICS emerging market nations.</p>
-                        <!-- Read more link -->
                         <a href="#" class="text-blue-500 hover:underline mx-5">Read more</a>
                         <hr class="my-3 mx-0">
                         <div class="flex justify-between px-5 text-xs">
@@ -96,16 +85,12 @@
                     </div>
                     <div class="lg:w-4/12 md:w-6/12 w-full mt-5 px-3">
                         <div class="card h-full">
-                        <!-- Card Header with Image -->
                         <div class="mb-4 relative">
                             <h6 class="bg-[#00000099] text-white px-3 text-sm rounded-lg absolute right-5 top-4">HOBBIES</h6>
                             <img src="../assets/about-university2.jpg" alt="Card Image" class="card-image" />
                         </div>
-                        <!-- Card Title -->
                         <router-link to="/BeautyChildhood" class="text-blue-500 hover:underline"><h2 class="card-title">The Beauty of the Childhood</h2></router-link>
-                        <!-- Card Body -->
                         <p class="card-body">After years of watching Vancouver housing prices climb, driven in part by Chinese investment, Eveline Xia came to a painful realization: Despite having a Master’s degree and solid career prospects.</p>
-                        <!-- Read more link -->
                         <router-link to="/BeautyChildhood" class="text-blue-500 hover:underline mx-5">Read more</router-link>
                         <hr class="my-3 mt-4 mx-0">
                         <div class="flex justify-between px-5 text-xs">
@@ -121,8 +106,20 @@
 </template>
 
 <script>
+import axios from 'axios'
     export default {
         name:'digitalLibrary',
+        data(){
+            return{
+                digitalLib:[],
+            }
+        },
+        created(){
+            axios.get('https://apis-amirican-university.quickly-egypt.com/api/category/Digital-Library').then((res)=>{
+                this.digitalLib = res.data.data
+                console.log(this.digitalLib);
+            }).catch(err=>console.log(err))
+        }
     }
 </script>
 

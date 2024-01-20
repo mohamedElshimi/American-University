@@ -1,8 +1,8 @@
 <template>
     <div class="w-10/12 mx-auto">
         <div class="my-7">
-            <h2 class="lg:text-4xl md:text-3xl text-xl font-semibold">Our main target is to “Developing Yourself as a Leader”</h2>
-            <p class="my-5">Tagged <router-link to="/SingleTag/developing" class="mx-3 text-blue-500 hover:underline">developing</router-link> <router-link to="/SingleTag/leader" class="me-3 text-blue-500 hover:underline">leader</router-link> <router-link to="/SingleTag/target" class="text-blue-500 hover:underline">target</router-link></p>
+            <h2 class="lg:text-4xl md:text-3xl text-xl font-semibold">{{ research.title }}</h2>
+            <p class="my-5">Tagged <router-link v-for="(item,index) in research.tags" :key="index" :to="`/SingleTag/${id}/${item.name}`" class="mx-3 text-blue-500 hover:underline">{{item.name}}</router-link></p>
             <h2 class="lg:text-3xl md:text-2xl text-xl font-semibold text-gray-800">Leave a Reply</h2>
             <p class="text-gray-700 my-5">Your email address will not be published. Required fields are marked *</p>
             <div class="w-full my-2">
@@ -31,8 +31,27 @@
 </template>
 
 <script>
+import axios from 'axios';
     export default {
-        name:'ourMainTarget',
+        name:'SingleResearch',
+        data(){
+            return{
+                id:'',
+                digitalLib:[],
+                research:{},
+            }
+        },
+        methods:{
+
+        },
+        created(){
+            this.id = this.$route.params.id;
+            axios.get('https://apis-amirican-university.quickly-egypt.com/api/category/Digital-Library').then((res)=>{
+                this.digitalLib = res.data.data
+                this.research = this.digitalLib.find(obj => obj['id'] == this.id)
+                console.log(this.research);
+            }).catch(err=>console.log(err))
+        }
     }
 </script>
 

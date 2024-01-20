@@ -17,7 +17,7 @@ import RegisterPage from '../views/RegisterPage.vue'
 import AgentsNpartners from '../views/AgentsNpartners.vue'
 import TestCenters from '../views/TestCenters.vue'
 import digitalLibrary from '../views/digitalLibrary.vue'
-import ourMainTarget from '../views/ourMainTarget.vue'
+import SingleResearch from '../views/SingleResearch.vue'
 import SingleTag from '../views/SingleTag.vue'
 import BodyCameras from '../views/BodyCameras.vue'
 import SingleCameraTag from '../views/SingleCameraTag.vue'
@@ -131,12 +131,12 @@ const router = createRouter({
       component: digitalLibrary
     },
     {
-      path: '/ourMainTarget',
-      name: 'ourMainTarget',
-      component: ourMainTarget
+      path: '/SingleResearch/:id',
+      name: 'SingleResearch',
+      component: SingleResearch
     },
     {
-      path: '/SingleTag/:name',
+      path: '/SingleTag/:id/:name',
       name: 'SingleTag',
       component: SingleTag
     },

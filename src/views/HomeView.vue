@@ -39,14 +39,20 @@
     </section>
     <section class="container flex mx-auto flex-wrap mt-10 text-center sm:px-2 px-5">
       <h2 class="md:text-2xl text-lg font-bold w-full text-start mb-3">DBA</h2>
-      <div class="lg:w-3/12 mb-4 md:w-6/12 mx-auto pb-3 w-full shadow-lg border-t-4 border-secondry">
-        <router-link to="/singleQualityManagement"><img src="../assets/total-quality-management.jpg" class="w-full" alt=""></router-link>
-        <router-link to="/singleQualityManagement" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">Doctorate in Total Quality Management</h3></router-link>
-        <div class="mb-3">
-          <router-link to="/singleQualityManagement"><button class="secondry2-button me-3">Details</button></router-link>
-          <button class="primary-button">Register</button>
+      <template v-for="(dpa,index) in DPA" :key="index">
+        <div class="lg:w-3/12 mb-4 md:w-6/12 px-2"  v-if="index < 4">
+          <div class=" mx-auto pb-3 w-full shadow-lg border-t-4 border-secondry min-h-[375px]">
+            <router-link to="/singleQualityManagement"><img src="../assets/total-quality-management.jpg" class="w-full" alt=""></router-link>
+            <router-link to="/singleQualityManagement" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">{{dpa.title}}</h3></router-link>
+            <div class="mb-3">
+              <router-link to="/singleQualityManagement"><button class="secondry2-button me-3">Details</button></router-link>
+              <button class="primary-button">Register</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </template>
+      
+      <!--
       <div class="lg:w-3/12 mb-4 md:w-6/12 mx-auto w-full md:ps-3">
         <div class=" shadow-lg border-t-4 pb-4 border-secondry">
           <router-link to="/ProjectManagment"><img src="../assets/project-managemen.jpg" class="w-full" alt=""></router-link>
@@ -76,22 +82,27 @@
             <button class="primary-button">Register</button>
           </div>
         </div>
-      </div>
+      </div>-->
       <div class="w-full mt-3">
         <router-link to="/DPApage"><button class="secondry-button">More</button></router-link>
       </div>
     </section>
     <section class="mt-10 container flex mx-auto flex-wrap text-center sm:px-2 px-5">
       <router-link to="/ProfessionalMaster" class="hover:underline w-full"><h2 class="md:text-2xl text-xl font-bold mb-3">Professional Master Degree</h2></router-link>
-      <div class="lg:w-4/12 md:w-6/12 mx-auto pb-3 w-full shadow-lg mb-4 border-t-4 border-secondry">
-        <router-link to="/HospitalManagement"><img src="../assets/hospital-management.jpg" class="w-full" alt=""></router-link>
-        <router-link to="/HospitalManagement" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">Master in Hospital Management</h3></router-link>
-        <div class="mb-3">
-          <router-link to="/HospitalManagement"><button class="secondry2-button me-3">Details</button></router-link>
-          <button class="primary-button">Register</button>
+      <template v-for="(PMD,index) in PMDs" :key="index">
+        <div class="lg:w-4/12 md:w-6/12 px-3" v-if="index < 3">
+          <div class="mx-auto pb-3 w-full shadow-lg mb-4 border-t-4 border-secondry">
+            <router-link to="/HospitalManagement"><img src="../assets/hospital-management.jpg" class="w-full" alt=""></router-link>
+            <router-link to="/HospitalManagement" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">{{ PMD.title }}</h3></router-link>
+            <div class="mb-3">
+              <router-link to="/HospitalManagement"><button class="secondry2-button me-3">Details</button></router-link>
+              <button class="primary-button">Register</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="lg:w-4/12 md:w-6/12 mx-auto w-full md:ps-3 mb-4">
+      </template>
+      
+      <!-- <div class="lg:w-4/12 md:w-6/12 mx-auto w-full md:ps-3 mb-4">
         <div class=" shadow-lg border-t-4 pb-4 border-secondry">
           <router-link to="/AppliedNutrition"><img src="../assets/Nutrition1.jpg" class="w-full" alt=""></router-link>
           <router-link to="/AppliedNutrition" class="hover:underline"><h3 class="font-semibold lg:text-xl md:text-lg text-base my-3">Master of Applied Nutrition & Dietetics</h3></router-link>
@@ -110,7 +121,7 @@
           <button class="primary-button">Register</button>
         </div>
         </div>
-      </div>
+      </div> -->
       <div class="w-full mt-3">
         <router-link to="/ProfessionalMaster"><button class="secondry-button">More</button></router-link>
       </div>
@@ -135,12 +146,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 import router from '@/router';
   export default {
     name:'HomeView',
     data(){
       return{
-        searchData:''
+        searchData:'',
+        DPA:[],
+        PMDs:[]
       }
     },
     methods:{
@@ -151,6 +165,16 @@ import router from '@/router';
           this.$router.push('/CertificatePage')
         }
       }
+    },
+    created(){
+      axios.get('https://apis-amirican-university.quickly-egypt.com/api/category/DBA').then((res)=>{
+        this.DPA= res.data.data;
+        console.log(this.DPA)
+      }).catch(err=>console.log(err))
+      axios.get('https://apis-amirican-university.quickly-egypt.com/api/category/Professional-Master-Degree').then((res)=>{
+        this.PMDs= res.data.data;
+        console.log(this.PMDs)
+      }).catch(err=>console.log(err))
     }
   }
 </script>
